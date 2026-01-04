@@ -4,11 +4,11 @@ services:
     image: postgres:15
     container_name: nestjslearning_postgres_db
     ports:
-      - '5432:5432'
+      - '5433:5432'  # <--- CHANGED: Host 5433 -> Container 5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: root
-      POSTGRES_DB: goodeals
+      POSTGRES_DB: nestjs_mastery
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

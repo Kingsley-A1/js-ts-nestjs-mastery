@@ -22,7 +22,7 @@ export class UsersService {
   findAll() {
     return this.users;
   }
-  //UP NEXT IS FINDONE METHOD(Here we fid it by ID)
+  //UP NEXT IS FINDONE METHOD(Here we find it by ID)
   //findOne is uses to find a user by their unique identifier (id).
   //the findOne method takes a single parameter id of type number (id: number).
   //The method uses the Array.prototype.find() method to search through the users array for a user object where the id property matches the provided id parameter.
