@@ -7,6 +7,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     // DB (Postgres) Connection setup
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
