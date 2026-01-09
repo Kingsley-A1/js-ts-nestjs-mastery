@@ -38,3 +38,39 @@ const allSkills = [...skills, "PostgreSQL", "Docker"];
 
 const updatedProfile = {...profile, isLearning: false, level: "intermediate"};
 console.log(updatedProfile, ...allSkills);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const product = {
+    name2: "Laptop",
+    price: 999,
+    tags: ["electronics", "computers", "sale"]
+};
+
+const {name2, tags} = product;
+
+const allTags = [...tags, featured = "brand new"];
+console.log(allTags);
