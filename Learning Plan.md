@@ -1,17 +1,4 @@
-```
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                                                                              ║
-║   ████████╗██╗   ██╗██████╗ ███████╗███████╗ ██████╗██████╗ ██╗██████╗ ████████╗  ║
-║   ╚══██╔══╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝  ║
-║      ██║    ╚████╔╝ ██████╔╝█████╗  ███████╗██║     ██████╔╝██║██████╔╝   ██║     ║
-║      ██║     ╚██╔╝  ██╔═══╝ ██╔══╝  ╚════██║██║     ██╔══██╗██║██╔═══╝    ██║     ║
-║      ██║      ██║   ██║     ███████╗███████║╚██████╗██║  ██║██║██║        ██║     ║
-║      ╚═╝      ╚═╝   ╚═╝     ╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝     ║
-║                                                                              ║
-║               &  N E S T J S   M A S T E R Y   P L A N                       ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
-```
+TYPESCRIPT & NESTJS MASTERY PLAN
 
 ---
 
@@ -76,10 +63,10 @@ Week 1-2          Week 3-4          Week 5-6          Week 7-8
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  Day │ Topic                │ Concept                    │ Deliverable      │
 ├──────┼──────────────────────┼────────────────────────────┼──────────────────┤
-│  1   │ Variables & Types    │ let, const, primitives     │ 10 exercises     │
-│  2   │ Functions            │ Arrow, callbacks, scope    │ 10 exercises     │
-│  3   │ Objects & Arrays     │ Destructuring, spread      │ 10 exercises     │
-│  4   │ Array Methods        │ map, filter, reduce, find  │ Build a filter   │
+│  1   │ Variables & Types    │ let, const, primitives     │ 10 exercises   Done│
+│  2   │ Functions            │ Arrow, callbacks, scope    │ 10 exercises   Done│
+│  3   │ Objects & Arrays     │ Destructuring, spread      │ 10 exercises   Done│
+│  4   │ Array Methods        │ map, filter, reduce, find  │ Build a filter Done│
 │  5   │ Control Flow         │ if/else, switch, loops     │ 10 exercises     │
 │  6   │ DOM Basics (Skim)    │ querySelector, events      │ Mini calculator  │
 │  7   │ REST DAY / REVIEW    │ Consolidate learning       │ Flashcard review │

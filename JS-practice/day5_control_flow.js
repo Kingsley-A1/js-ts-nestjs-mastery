@@ -131,7 +131,7 @@ const users = [
 ];
 
 for (const user of users){
-    if (user.active === true){
+    if (user.active){
         console.log(`${user.name} is active!`)
     }
 }

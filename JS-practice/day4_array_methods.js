@@ -1,4 +1,4 @@
-//The map() array method
+//The map() array method transform data into a new array
 // const users = [
 //     {name: "Kingsley", age: 25, isLearning: true},
 //     {name: "John", age: 30, isLearning: false},
@@ -53,7 +53,7 @@ console.log(result);
 
 // Micro-Challenge #1: Transform
 const originalNums = [2, 4, 6, 8, 10];
-const trippledNums = originalNums.map(originalNums => originalNums * 3);
+const trippledNums = originalNums.map(originalNum => originalNum * 3);
 console.log(trippledNums);
 
 //🏋️ Micro-Challenge #2: Filter
@@ -66,12 +66,12 @@ const items = [
     { name: "USB Cable", price: 10,id: 5 }
 ];
 
-const cheapItems = items.filter(items => items.price < 500);
+const cheapItems = items.filter(item => item.price < 500);
 console.log(cheapItems);
 
 
 //🏋️ Micro-Challenge #3: Find
-const findItemById = items.find(items => items.id === 3);
+const findItemById = items.find(item => item.id === 3);
 console.log(findItemById);
 
 // 🏋️ Micro-Challenge #4: The Ultimate Chain ⛓️
@@ -82,7 +82,13 @@ const users = [
     { id: 4, name: "Bola", active: true, role: "moderator" },
     { id: 5, name: "Emeka", active: false, role: "user" }
 ];
-const isActive =  users.filter(users => users.active)
-.filter(users => users.role == "user")
-.map(users => users.name);
+const isActive =  users.filter(user => user.active)
+.filter(user => user.role == "user")
+.map(user => user.name);
 console.log(isActive);
+
+
+// .filter() returns a new array if a certain defined condition is met, or
+//reurns an empty array if not met.
+
+// find() returns a single item taht matches the first call
