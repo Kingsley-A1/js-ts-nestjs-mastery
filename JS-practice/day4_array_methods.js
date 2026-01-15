@@ -23,17 +23,16 @@ const tenants = [
 //The filter method returns a new array when a certain condition is true
 
 const paidTenants = tenants.filter( tenants => tenants.paidRent === true );
-console.log(paidTenants);   
+console.log(`Paid tenants: ${paidTenants}`);   
 
 
 //The find method returns the first element that matches a certain condition
 const findPaidTenant = tenants.find(tenants => tenants.paidRent == true);
-console.log(findPaidTenant.name);
+console.log(`Paid tenant: ${findPaidTenant.name}`);
 
 //The reduce method returns the sum of all elements in an array
 const totalTenantAge = tenants.reduce((total, tenants) => tenants.age, 0);
-const tTa = tenants.reduce((total, tenants) => tenants.age, 0);
-console.log(tTa);
+console.log(`Total tenant age: ${totalTenantAge}`);
 
 
 const products = [
@@ -48,13 +47,13 @@ const result = products.filter(product => product.inStock)
 .filter(product => product.price < 500)
 .map(product => product.name);
 
-console.log(result);
+console.log(`Products under 500: ${result}`);
 
 
 // Micro-Challenge #1: Transform
 const originalNums = [2, 4, 6, 8, 10];
 const trippledNums = originalNums.map(originalNum => originalNum * 3);
-console.log(trippledNums);
+console.log(`Tripled numbers: ${trippledNums}`);
 
 //🏋️ Micro-Challenge #2: Filter
 
@@ -92,3 +91,9 @@ console.log(isActive);
 //reurns an empty array if not met.
 
 // find() returns a single item taht matches the first call
+//How keyword searching works in real lif using the array methods
+const searchedItem = "Mouse";
+const foundItem = items.find(item => item.name.toLowerCase().includes(searchedItem.toLowerCase()));
+console.log(`The searched item is ${foundItem?.name}`);
+
+// The .includes() method takes a string as an argument and returns a boolean value 

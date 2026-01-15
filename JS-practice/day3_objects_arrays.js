@@ -74,3 +74,40 @@ const {name2, tags} = product;
 
 const allTags = [...tags, "brand new"];
 console.log(allTags);
+
+
+
+const day1 = {time: "2:00 PM", 
+            lesson: "Object & Arrrays",
+            isCompleted: true,
+};
+
+const {time, lesson, isCompleted, restTime = "2:30 PM"} = day1;
+console.log(day1);
+
+
+
+const products = [
+  { name: 'Laptop', price: 1000, inStock: true },
+  { name: 'Phone', price: 500, inStock: false },
+  { name: 'Tablet', price: 300, inStock: true },
+  { name: 'Watch', price: 200, inStock: true },
+];
+
+const productInStock = products.filter(product => product.inStock);
+const productInStockUnder500 = productInStock.filter(product => product.price < 500);
+const productInStockUnder500Name = productInStockUnder500.map(product => product.name);
+console.log(productInStockUnder500Name);
+
+//Short form of the above code
+const result = products //Assign a new variable to the result of the filter method
+ .filter((p) => p.inStock)
+ .filter((p) => p.price < 500)
+ .map((p) => p.name);
+ console.log(result);
+const   firstProductUnder500 = products.find((p) => p.price <= 500);
+console.log(firstProductUnder500);
+
+const totalPrice = products.reduce((total,product) => product.price + total, 0)
+console.log(totalPrice);
+
