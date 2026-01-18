@@ -10,18 +10,18 @@
 // const skills = ["JavaScript", "TypeScript", "NestJS"]
 // console.log(`I am taking ${skills[0]} first, afterwards, I will take ${skills[1]} and finally ${skills[2]}!`)
 
-
-//Array nested in an object 
+//Array nested in an object
 const profile = {
-    name: "Kingsley",
-    age: 25,
-    isLearning: true,
-    skills: ["JavaScript", "TypeScript", "NestJS"]
-
-}
-console.log(`${profile.name} is ${profile.age} years old and he is currenly learning ${profile.skills[0]}!`)
+  name: 'Kingsley',
+  age: 25,
+  isLearning: true,
+  skills: ['JavaScript', 'TypeScript', 'NestJS'],
+};
+console.log(
+  `${profile.name} is ${profile.age} years old and he is currenly learning ${profile.skills[0]}!`,
+);
 //Destructuring objects
-const {name, skills} = profile;
+const { name, skills } = profile;
 console.log(profile);
 console.log(name);
 console.log(skills);
@@ -33,59 +33,27 @@ console.log(firstSkill); //js
 console.log(secondSkill); //ts
 
 //Micro Challange 4: The  Spread operator(...)
-const allSkills = [...skills, "PostgreSQL", "Docker"];
-// console.log(allSkills); 
+const allSkills = [...skills, 'PostgreSQL', 'Docker'];
+// console.log(allSkills);
 
-const updatedProfile = {...profile, isLearning: false, level: "intermediate"};
+const updatedProfile = { ...profile, isLearning: false, level: 'intermediate' };
 console.log(updatedProfile, ...allSkills);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const product = {
-    name2: "Laptop",
-    price: 999,
-    tags: ["electronics", "computers", "sale"]
+  name2: 'Laptop',
+  price: 999,
+  tags: ['electronics', 'computers', 'sale'],
 };
 
-const {name2, tags} = product;
+const { name2, tags } = product;
 
-const allTags = [...tags, "brand new"];
+const allTags = [...tags, 'brand new'];
 console.log(allTags);
 
+const day1 = { time: '2:00 PM', lesson: 'Object & Arrrays', isCompleted: true };
 
-
-const day1 = {time: "2:00 PM", 
-            lesson: "Object & Arrrays",
-            isCompleted: true,
-};
-
-const {time, lesson, isCompleted, restTime = "2:30 PM"} = day1;
+const { time, lesson, isCompleted, restTime = '2:30 PM' } = day1;
 console.log(day1);
-
-
 
 const products = [
   { name: 'Laptop', price: 1000, inStock: true },
@@ -94,20 +62,26 @@ const products = [
   { name: 'Watch', price: 200, inStock: true },
 ];
 
-const productInStock = products.filter(product => product.inStock);
-const productInStockUnder500 = productInStock.filter(product => product.price < 500);
-const productInStockUnder500Name = productInStockUnder500.map(product => product.name);
+const productInStock = products.filter((product) => product.inStock);
+const productInStockUnder500 = productInStock.filter(
+  (product) => product.price < 500,
+);
+const productInStockUnder500Name = productInStockUnder500.map(
+  (product) => product.name,
+);
 console.log(productInStockUnder500Name);
 
 //Short form of the above code
 const result = products //Assign a new variable to the result of the filter method
- .filter((p) => p.inStock)
- .filter((p) => p.price < 500)
- .map((p) => p.name);
- console.log(result);
-const   firstProductUnder500 = products.find((p) => p.price <= 500);
+  .filter((p) => p.inStock)
+  .filter((p) => p.price < 500)
+  .map((p) => p.name);
+console.log(result);
+const firstProductUnder500 = products.find((p) => p.price <= 500);
 console.log(firstProductUnder500);
 
-const totalPrice = products.reduce((total,product) => product.price + total, 0)
+const totalPrice = products.reduce(
+  (total, product) => product.price + total,
+  0,
+);
 console.log(totalPrice);
-
