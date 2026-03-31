@@ -67,9 +67,9 @@ Week 1-2          Week 3-4          Week 5-6          Week 7-8
 │  2   │ Functions            │ Arrow, callbacks, scope    │ 10 exercises   Done│
 │  3   │ Objects & Arrays     │ Destructuring, spread      │ 10 exercises   Done│
 │  4   │ Array Methods        │ map, filter, reduce, find  │ Build a filter Done│
-│  5   │ Control Flow         │ if/else, switch, loops     │ 10 exercises     │
-│  6   │ DOM Basics (Skim)    │ querySelector, events      │ Mini calculator  │
-│  7   │ REST DAY / REVIEW    │ Consolidate learning       │ Flashcard review │
+│  5   │ Control Flow         │ if/else, switch, loops     │ 10 exercises   Done  │
+│  6   │ DOM Basics (Skim)    │ querySelector, events      │ Mini calculator Done  │
+│  7   │ REST DAY / REVIEW    │ Consolidate learning       │ Flashcard review Done │
 └──────┴──────────────────────┴────────────────────────────┴──────────────────┘
 ```
 
@@ -79,9 +79,9 @@ Week 1-2          Week 3-4          Week 5-6          Week 7-8
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  Day │ Topic                │ Concept                    │ Deliverable      │
 ├──────┼──────────────────────┼────────────────────────────┼──────────────────┤
-│  8   │ Callbacks            │ Callback hell, why Promises│ Convert callback D│
-│  9   │ Promises             │ .then(), .catch(), chaining│ Fetch API usage  D│
-│ 10   │ Async/Await          │ try/catch, sequential flow │ Refactor Day 9   D│
+│  8   │ Callbacks            │ Callback hell, why Promises│ Convert callback │
+│  9   │ Promises             │ .then(), .catch(), chaining│ Fetch API usage  │
+│ 10   │ Async/Await          │ try/catch, sequential flow │ Refactor Day 9   │
 │ 11   │ Error Handling       │ throw, custom errors       │ Error wrapper fn │
 │ 12   │ Modules (ES6)        │ import/export, default     │ Split code files │
 │ 13   │ Classes (ES6)        │ constructor, this, methods │ Create a class   │
@@ -343,7 +343,7 @@ Legend:
 ║     │    automated tests, and CI/CD. I will be a TypeScript Backend  │      ║
 ║     │    Engineer ready for real-world opportunities."               │      ║
 ║     │                                                                 │      ║
-║     │                                        — Kingsley, March 2026   │      ║
+║     │                                        — Kingsley, January 2026   │      ║
 ║     │                                                                 │      ║
 ║     └─────────────────────────────────────────────────────────────────┘      ║
 ║                                                                              ║
