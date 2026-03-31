@@ -188,6 +188,8 @@ for (let i = 0; i <= 1000; i++) {
 //       else results.push(i); }
 // console.log(results);
 
+// More professional way to write the FizzBuzz
+
 const result = [];
 for (let i = 0; i <= 1000; i++) {
   if (i % 3 === 0) {

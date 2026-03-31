@@ -8,7 +8,7 @@
 // logType(null);
 // logType(undefined);
 
-//Micro challange 1: raditional function
+//Micro challange 1: Traditional function
 function logType(value) {
   console.log(`${typeof logType}: ${value}`);
 }
@@ -28,14 +28,14 @@ logType(undefined);
 const add = (a, b) => a + b;
 console.log(add(2, 4));
 
-//Micro CHALLENGE 4: Default parameterfunction
+//Micro CHALLENGE 4: Default parameter function
 const greet = (name, greeting = 'Hello') => {
   console.log(`${greeting}, ${name}!`);
 };
 greet('Hassan');
 greet('King', 'Welcome');
 
-//  Micro-Challenge #5: Callbacks (The Foundation of Async JS
+//  Micro-Challenge #5: Callbacks (The Foundation of Async JS)
 const processNumber = (num, callback) => {
   return callback(num);
 };
