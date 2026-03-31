@@ -31,3 +31,5 @@ const isInStock = true;
 console.log(`Data type of isInStock is ${typeof isInStock} ${isInStock}`);
 
 console.log(`Data type of  new product is  ${typeof newProduct} ${newProduct}`);
+
+const box = 'Bread box';

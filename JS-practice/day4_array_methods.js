@@ -1,10 +1,11 @@
 //The map() array method transform data into a new array
-// const users = [
-//     {name: "Kingsley", age: 25, isLearning: true},
-//     {name: "John", age: 30, isLearning: false},
-//     {name: "Jane", age: 22, isLearning: true},
-// ];
-
+const users = [
+    {name: "Kingsley", age: 25, isLearning: true},
+    {name: "John", age: 30, isLearning: false},
+    {name: "Jane", age: 22, isLearning: true},
+];
+const userAgeDouble = users.map((users) => users.age * 2);
+console.log(userAgeDouble);
 // const upperCasenames = users.map(users => users.name.toUpperCase());
 // console.log(upperCasenames);
 
@@ -14,20 +15,28 @@
 //The filter method returns a new array when a certain condition is true
 
 const tenants = [
-  { name: 'Kingsley', age: 25, paidRent: true },
+  { name: 'Kay', age: 25, paidRent: true },
   { name: 'John', age: 30, paidRent: false },
   { name: 'Jane', age: 22, paidRent: true },
 ];
 
+const tenantsBelow30 = tenants.filter((tenant) => tenant.age < 30);
+console.log(`Tenants below 30: ${tenantsBelow30}`);
 //The filter method returns a new array when a certain condition is true
 
-const paidTenants = tenants.filter((tenants) => tenants.paidRent === true);
+const paidTenants = tenants.filter((tenant) => tenant.paidRent === true);
 console.log(`Paid tenants: ${paidTenants}`);
 
 //The find method returns the first element that matches a certain condition
 const findPaidTenant = tenants.find((tenants) => tenants.paidRent == true);
 console.log(`Paid tenant: ${findPaidTenant.name}`);
 
+const unPaidTenant = tenants.find((tenants) => tenants.paidRent == false);
+if (unPaidTenant.length <= 1) {
+  console.log(`Unpaid tenant: ${unPaidTenant.name}`);
+} else {
+  console.log(`Unpaid tenants: ${unPaidTenant.name}`);
+}
 //The reduce method returns the sum of all elements in an array
 const totalTenantAge = tenants.reduce((total, tenants) => tenants.age, 0);
 console.log(`Total tenant age: ${totalTenantAge}`);
@@ -90,7 +99,7 @@ console.log(isActive);
 //How keyword searching works in real lif using the array methods
 const searchedItem = 'Mouse';
 const foundItem = items.find((item) =>
-  item.name.toLowerCase().includes(searchedItem.toLowerCase()),
+  item.name.toLowerCase().includes(searchedItem.toLocaleUpperCase()),
 );
 console.log(`The searched item is ${foundItem?.name}`);
 

@@ -49,9 +49,12 @@ fetchUser(-1)
 function getUser(userId) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve({ id: userId, userName: 'King Madu' });
-    }, 300);
-    reject(new Error('Invalid user ID'));
+      if (userId <= 0) {
+        reject(new Error('Invalid user ID'));
+      } else {
+        resolve({ id: userId, name: 'King Madu' });
+      }
+    }, 500);
   });
 }
 
@@ -64,7 +67,11 @@ function fetchPosts(userId) {
         { id: 3, title: 'Learning Typescript' },
       ]);
     }, 300);
-    reject(new Error('Invalid user ID'));
+    
+    setTimeout(() => {
+        reject(new Error('Invalid user ID'));
+    }, 300) 
+    
   });
 }
 
@@ -72,13 +79,28 @@ function fetchPosts(userId) {
 // "Kingsley has 2 posts"
 // Use .then() chaining, not nesting!
 getUser(1)
-  .then((userName) => {
-    console.log(userName);
-  })
-  .then((posts) => console.log(posts.length))
-  .catch((error) => console.log(error));
+    .then(user =>{
+        savedUser = user;
+        return fetchPosts(user.id)
+    })
+    .then(posts => {
+        savedPosts = posts;
+        console.log(`${savedUser.name} has ${savedPosts.length} posts`);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+  //🏋️ Micro-Challenge #4: Promise.all
 
-fetchPosts(1)
-  .then((posts) => console.log(posts.length))
-  .catch((error) => console.log(error));
-console.log(`${userName} has ${posts.length} posts`);
+const promise1 = fetchUser(1);
+const promise2 = fetchUser(2);
+const promise3 = fetchUser(3);
+
+// Wait for ALL to complete:
+Promise.all([promise1, promise2, promise3])
+    .then(users => {
+        console.log("All users fetched:", users);  // Array of results
+    })
+    .catch(err => {
+        console.log("One or more promises  failed:", err);  // If ANY fails
+    });

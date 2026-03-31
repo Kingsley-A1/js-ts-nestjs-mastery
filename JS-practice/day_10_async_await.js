@@ -129,7 +129,8 @@ END
 function fetchFromAPI(endpoint, delay, data, fail = false) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (fail)return reject(new Error(`Failed to fetch data from ${endpoint}`));
+      if (fail)
+        return reject(new Error(`Failed to fetch data from ${endpoint}`));
       resolve(
         `Fetched data from ${endpoint} after ${delay} ms and the data returned is ${data}`,
       );
@@ -187,7 +188,7 @@ async function fetchParallelSettled() {
   console.log(
     `It took ${totalTimeParallelSettled} ms to fetch in parallel with allSettled`,
   );
-  
+
   // Let's look at the "structure" of the results
   results.forEach((result, index) => {
     if (result.status === 'fulfilled') {
