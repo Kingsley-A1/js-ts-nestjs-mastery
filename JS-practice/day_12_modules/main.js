@@ -26,6 +26,14 @@ const users = [];
   console.log('Users array:', users);
   console.log('');
 
+
+
+
+
+
+
+
+  
   console.log('═══════════════════════════════════════════════════');
   console.log('TEST 2: Create User - Missing Email');
   console.log('═══════════════════════════════════════════════════');

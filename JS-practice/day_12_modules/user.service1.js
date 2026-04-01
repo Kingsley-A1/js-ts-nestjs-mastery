@@ -2,7 +2,7 @@
 // user.service.js - User Business Logic
 // ═══════════════════════════════════════════════════════════════════════════
 // This file contains user CRUD functions
-// IMPORTS: error classes (to throw them)
+// IMPORTS: error from error.js classes (to throw them)
 // EXPORTS: createUser, getUser, deleteUser, updateUser
 
 import { ValidationError, NotFoundError, DuplicateError } from './errors.js';
