@@ -1,22 +1,4 @@
-// export class BankAccount{
-//     constructor(ownerName){
-//     this.balance = 0;
-//     deposite() = this.balance + amount;
-//     withdraw() = this.balance - amount;
-
-//     if(withdraw < this.balance){
-//         throw new Error('Insufficient Funds')
-//     }else{
-//         return
-//     }
-//     }
-// }
-
-// const myAccount = new BankAccount('Kingsley')
-
-// deposite(500);
-// withdraw(200);
-// console.log(BankAccount)
+//Creating my first Class 
 
 export class BankAccount {
   constructor(ownerName) {
@@ -27,7 +9,7 @@ export class BankAccount {
   deposit(amount) {
     this.balance += amount;
     console.log(
-      `After deposit of ${amount}, the balance now is ${this.balance}`,
+      `After deposit of ${amount}, the balance now is ${this.balance}`
     );
   }
   withdraw(amount) {

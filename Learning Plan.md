@@ -79,12 +79,12 @@ Week 1-2          Week 3-4          Week 5-6          Week 7-8
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  Day │ Topic                │ Concept                    │ Deliverable      │
 ├──────┼──────────────────────┼────────────────────────────┼──────────────────┤
-│  8   │ Callbacks            │ Callback hell, why Promises│ Convert callback │
-│  9   │ Promises             │ .then(), .catch(), chaining│ Fetch API usage  │
-│ 10   │ Async/Await          │ try/catch, sequential flow │ Refactor Day 9   │
-│ 11   │ Error Handling       │ throw, custom errors       │ Error wrapper fn │
-│ 12   │ Modules (ES6)        │ import/export, default     │ Split code files │
-│ 13   │ Classes (ES6)        │ constructor, this, methods │ Create a class   │
+│  8   │ Callbacks            │ Callback hell, why Promises│ Convert callback  Done│
+│  9   │ Promises             │ .then(), .catch(), chaining│ Fetch API usage  Done│
+│ 10   │ Async/Await          │ try/catch, sequential flow │ Refactor Day 9   Done│
+│ 11   │ Error Handling       │ throw, custom errors       │ Error wrapper fn Done│
+│ 12   │ Modules (ES6)        │ import/export, default     │ Split code files Done│
+│ 13   │ Classes (ES6)        │ constructor, this, methods │ Create a class   Done│
 │ 14   │ REST DAY / PROJECT   │ Build a Mini CLI Tool      │ Node.js CLI app  │
 └──────┴──────────────────────┴────────────────────────────┴──────────────────┘
 ```
