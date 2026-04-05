@@ -1,6 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/env node //The Shebang, telling the terminal that the enviroment is a Node Enviroment
 import fs from 'fs';
-//This prints the raw array of words coming fromt erminal
+//This prints the raw array of words coming from terminal
 // console.log(process.argv);
 
 const args = process.argv.slice(2);
@@ -15,6 +15,7 @@ function getSuggestion(unknown) {
   //Find a valid command that shares the first 3 letters with the typo
   return validCommands.find((cmd) => cmd.startsWith(unknown.slice(0, 3)));
 }
+
 if (command === 'generate') {
   if (!target) {
     console.log(
