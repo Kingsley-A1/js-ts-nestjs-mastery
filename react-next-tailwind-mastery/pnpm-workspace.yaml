@@ -1,0 +1,9 @@
+fetchTimeout: 300000
+fetchRetries: 5
+networkConcurrency: 8
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
