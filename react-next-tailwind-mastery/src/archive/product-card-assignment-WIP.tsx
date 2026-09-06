@@ -53,13 +53,13 @@ export default function ProductCard({
         </div>
 
         <div>
-          //TODO: Complete the design for the availability status and other
+          {/* TODO: Complete the design for the availability status and other
           features of the product card. This includes implementing the quantity
           increase/decrease buttons, displaying the subtotal, and ensuring that
           the availability status is clearly indicated to the user.
           Additionally, consider adding accessibility features and responsive
           design elements to enhance the user experience across different
-          devices.
+          devices. */}
           <span className="bg-emerald-160 shrink-0 rounded-full"></span>
         </div>
       </div>
