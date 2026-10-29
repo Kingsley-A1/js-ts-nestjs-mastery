@@ -39,3 +39,8 @@ hover: focus: disabled:
 
 RESPONSIVE
 sm: lg: xl:
+
+
+{property}-{colour family}-{shade scale}
+bg-emerald-100
+light-bg/dark-text same-hue = bg-100 text-700

@@ -1,102 +1,74 @@
-<<<<<<< HEAD
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# NestJS Mastery
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+A learning monorepo for building TypeScript, NestJS, and full-stack skills. The projects are intentionally kept together, but each runnable app keeps its own dependencies and lockfile.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Repository map
 
-## Description
+- `src/` — NestJS API, including the `products` and `users` modules.
+- `test/` — NestJS end-to-end tests.
+- `JS-practice/` — JavaScript fundamentals and exercises.
+- `ts-practice/` — TypeScript fundamentals and exercises.
+- `react-next-tailwind-mastery/` — separate Next.js and React learning project. It uses pnpm; it is not part of the root npm project.
+- `Learning Plan.md`, `LEARNING HACK.MD`, and `GIT-HANDBOOK.md` — learning and Git reference material.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Requirements
 
-## Project setup
+- Git
+- Node.js 24 LTS
+- Docker Desktop with Docker Compose, if running the NestJS API with PostgreSQL
+- Corepack for the nested frontend's pnpm setup
 
-```bash
-$ npm install
+## Set up the NestJS API
+
+Run these commands from the repository root in PowerShell:
+
+```powershell
+npm ci
+Copy-Item .env.example .env
+docker compose up -d
+npm run start:dev
 ```
 
-## Compile and run the project
+The API starts using the root npm project. The Docker Compose service exposes PostgreSQL on `localhost:5433`. The `.env.example` values and Docker Compose credentials are local learning defaults only; never use them for a production deployment.
 
-```bash
-# development
-$ npm run start
+Useful root commands:
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+```powershell
+npm run build
+npm test
+npm run test:e2e
+npm run start:prod
+docker compose down
 ```
 
-## Run tests
+Build before running `npm run start:prod`. Use `docker compose down` to stop the database container; its named volume remains available for the next run.
 
-```bash
-# unit tests
-$ npm run test
+## Set up the React/Next.js project
 
-# e2e tests
-$ npm run test:e2e
+Open a second terminal and switch to the nested project:
 
-# test coverage
-$ npm run test:cov
+```powershell
+Set-Location react-next-tailwind-mastery
+corepack pnpm install --frozen-lockfile
+corepack pnpm dev
 ```
 
-## Deployment
+Visit [http://localhost:3000](http://localhost:3000). Other frontend commands, run from that folder:
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+```powershell
+corepack pnpm lint
+corepack pnpm build
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+Use the nested `pnpm-lock.yaml` for the frontend; do not install its dependencies from the repository root.
 
-## Resources
+## Use this repository on another laptop
 
-Check out a few resources that may come in handy when working with NestJS:
+Clone the branch currently used for the combined learning projects:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```powershell
+git clone --branch learning/react-next-tailwind https://github.com/Kingsley-A1/js-ts-nestjs-mastery.git
+Set-Location js-ts-nestjs-mastery
+```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-=======
-# learning-nestj
->>>>>>> 1f52a285a88175d6af36c9689bb945cd74e1000a
+Then follow the NestJS and/or frontend setup above. `.env` is intentionally ignored by Git; copy `.env.example` to `.env` on each machine that needs the NestJS database configuration. Never commit your real `.env` file.
