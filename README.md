@@ -64,11 +64,11 @@ Use the nested `pnpm-lock.yaml` for the frontend; do not install its dependencie
 
 ## Use this repository on another laptop
 
-Clone the branch currently used for the combined learning projects:
+`main` is the complete codebase (both apps plus the learning archives), so a normal clone gets everything:
 
 ```powershell
-git clone --branch learning/react-next-tailwind https://github.com/Kingsley-A1/js-ts-nestjs-mastery.git
+git clone https://github.com/Kingsley-A1/js-ts-nestjs-mastery.git
 Set-Location js-ts-nestjs-mastery
 ```
 
-Then follow the NestJS and/or frontend setup above. `.env` is intentionally ignored by Git; copy `.env.example` to `.env` on each machine that needs the NestJS database configuration. Never commit your real `.env` file.
+Then follow the NestJS and/or frontend setup above. Dependencies and local config are never cloned: `node_modules`, `.next`, build output, and `.env` are ignored by Git. Reinstall them with `npm ci` (root) and `corepack pnpm install --frozen-lockfile` (frontend), and copy `.env.example` to `.env` only on machines that need the NestJS database configuration. Never commit a real `.env`.
